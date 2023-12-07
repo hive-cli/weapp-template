@@ -1,4 +1,4 @@
-/**index.wxss**/
+/** index.wxss **/
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -7,10 +7,10 @@
 }
 
 .userinfo-avatar {
-  overflow: hidden;
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
+  overflow: hidden;
   border-radius: 50%;
 }
 

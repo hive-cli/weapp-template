@@ -18,9 +18,21 @@ module.exports = {
   tslintIntegration: false,
   overrides: [
     {
-      files: '*.html',
+      files: ['*.wxss', '*.acss'],
+      options: {
+        parser: 'css'
+      }
+    },
+    {
+      files: ['*.wxml', '*.axml'],
       options: {
         parser: 'html'
+      }
+    },
+    {
+      files: ['*.wxs', '*.sjs'],
+      options: {
+        parser: 'babel'
       }
     }
   ]

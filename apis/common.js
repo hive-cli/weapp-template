@@ -35,9 +35,10 @@ async function fetchOpenId() {
 }
 
 /** opneId 初始化 */
-export async function InitOpenId() {
+export function InitOpenId() {
+  // eslint-disable-next-line no-async-promise-executor
   return new Promise(async (resolve, reject) => {
-    let sessionId = wx.getStorageSync('SESSION_ID')
+    // let sessionId = wx.getStorageSync('SESSION_ID')
     let expiredTime = wx.getStorageSync('EXPIRED_TIME')
     let openId = wx.getStorageSync('OPEN_ID')
     if (openId && +new Date() - expiredTime <= config.expiredTimeout) {
@@ -107,7 +108,7 @@ export function Location() {
  * @param {object} data 上传数据
  * @param {string} uploadUrl 上传路径
  */
-export async function UploadFile(data, uploadUrl = '/wechatUser/insertImage') {
+export function UploadFile(data, uploadUrl = '/wechatUser/insertImage') {
   return new Promise((resolve, reject) => {
     const { filePath, name = 'file', url = `${config.baseURL}${uploadUrl}`, formData = {} } = data
     let token = wx.getStorageSync('token')

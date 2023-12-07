@@ -1,0 +1,15 @@
+**.d.ts
+dist
+node_modules
+
+# .stylelintignore
+# 旧的不需打包的样式库
+*.min.css
+ 
+# 其他类型文件
+*.js
+*.jpg
+*.png
+*.eot
+*.ttf
+*.woff

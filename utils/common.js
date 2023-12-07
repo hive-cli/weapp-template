@@ -90,8 +90,8 @@ export function toChinesNum(num) {
         (i == 0 && strArr[i] == 0
           ? ''
           : i > 0 && strArr[i] == 0 && strArr[i - 1] == 0
-          ? ''
-          : changeNum[strArr[i]] + (strArr[i] == 0 ? unit[0] : unit[i])) + newNum
+            ? ''
+            : changeNum[strArr[i]] + (strArr[i] == 0 ? unit[0] : unit[i])) + newNum
     }
     return newNum
   }
